@@ -10,12 +10,12 @@ const app = dva({
 
 // 2. Plugins
 // app.use({});
-
+console.log(require('./models').default)
 // require('./models').default.forEach(key => app.model(key.default))
-
+require('./models').default.forEach(key => app.model(key.default))
 // 3. Model
-app.model(require('./models/counter').default);
-app.model(require('./models/example').default);
+// app.model(require('./models/counter').default);
+// app.model(require('./models/example').default);
 // 4. Router
 app.router(RouterConfig);
 
